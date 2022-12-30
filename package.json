@@ -37,7 +37,8 @@
   "lint-staged": {
     "*.ts": [
       "yarn lint-fix",
-      "yarn prettier --check 'src/**'"
+      "yarn prettier --check 'src/**'",
+      "yarn test:staged"
     ]
   }
 }

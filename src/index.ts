@@ -1,1 +1,5 @@
-console.log('Hello World');
+export class Person {
+  sayMyName() {
+    return 'Juninho';
+  }
+}
