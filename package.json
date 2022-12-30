@@ -5,10 +5,12 @@
   "author": "Jose Junior <juniorferreira1919@hotmail.com>",
   "license": "MIT",
   "scripts": {
+    "build":"tsc",
     "dev": "ts-node-dev src/index.ts",
     "test": "jest --passWithNoTests",
     "test:watch": "yarn test --watch",
     "test:staged": "yarn test --findRelatedTests",
+    "test:push": "yarn test --coverage",
     "lint": "eslint . --ext .ts",
     "lint-fix": "eslint . --ext .ts --fix",
     "prepare": "husky install"
