@@ -2,17 +2,21 @@
   "name": "setup-nodejs",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Jose Junior <juniorferreira1919@hotmail.com>",
+  "author": {
+    "name": "Jose Junior",
+    "email": "juniorferreira1919@hotmail.com"
+  },
   "license": "MIT",
   "scripts": {
     "build": "tsc",
     "dev": "ts-node-dev src/index.ts",
     "test": "jest --passWithNoTests",
     "test:watch": "yarn test --watch",
-    "test:staged": "yarn test --findRelatedTests",
+    "test:staged": "yarn test --bail --findRelatedTests",
     "test:push": "yarn test --coverage",
     "lint": "eslint --ext .ts",
     "lint-fix": "eslint --ext .ts --fix",
+    "commit": "git-cz",
     "prepare": "husky install"
   },
   "devDependencies": {
@@ -20,6 +24,8 @@
     "@types/node": "^18.11.18",
     "@typescript-eslint/eslint-plugin": "^5.47.1",
     "@typescript-eslint/parser": "^5.47.1",
+    "commitizen": "^4.2.6",
+    "cz-conventional-changelog": "3.3.0",
     "eslint": "^8.30.0",
     "eslint-config-prettier": "^8.5.0",
     "git-commit-msg-linter": "^4.5.0",
@@ -43,5 +49,11 @@
       "yarn prettier --check 'src/**'",
       "yarn test:staged"
     ]
+  },
+  "dependencies": {},
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
